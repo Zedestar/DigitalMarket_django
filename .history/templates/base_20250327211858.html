@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords">
+        <meta name="description">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'tailwind/styles.css' %}">
+    </head>
+    <body class="bg-gray-200 flex flex-col min-h-screen">
+        {% include 'partials/navbar.html' %}
+        <main class="flex-1 mt-10 h-full">
+            {% block body %}
+            {% endblock body %}
+        </main>
+        {% include 'partials/footer.html' %}
+    </body>
+</html>

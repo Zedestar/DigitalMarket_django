@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="container mx-auto mt-10 grid place-items-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {% for product in products %}
+            <div class="shadow-lg hover:shadow-xl hover:border hover:border-gray-300 h-72">
+                <div class="w-full h-52">
+                    <img src="{{ product.photo }}"
+                         alt="{{ product.name }}"
+                         width="200px"
+                         height="200px">
+                </div>
+                <h2 class="font-bold">{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                <p>Price: ${{ product.price }}</p>
+                <hr>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock body %}

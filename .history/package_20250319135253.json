@@ -1,0 +1,16 @@
+{
+  "name": "digitalmarket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": " build tailwindcss static\tailwind\tailwindClasses -o "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "tailwindcss": "^4.0.14"
+  }
+}

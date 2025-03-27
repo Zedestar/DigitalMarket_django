@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keyword">
+        <meta name="description">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'tailwind/styles.css' %}">
+    </head>
+    <body class="bg-gray-200">
+        <div class="flex justify-between shadow-lg py-2 font-bold">
+            <div class="ml-6">
+                <img src="" alt="" height="20px" width="20px">
+                <span>Digital Market</span>
+            </div>
+            <ul class="mr-6 flex">
+                <li class="mx-4">
+                    <a href="">Dashboard</a>
+                </li>
+                <li class="mx-4">
+                    <a href="">Sales</a>
+                </li>
+                <li class="mx-4">
+                    <a href="">Create Product</a>
+                </li>
+                <li class="mx-4">
+                    <a href="">My Purchases</a>
+                </li>
+                <li class="mx-4">
+                    <a href="">Logout</a>
+                </li>
+                <li class="mx-4">
+                    <a href="">Login</a>
+                </li>
+            </ul>
+        </div>
+        {% block body %}
+        {% endblock body %}
+    </body>
+</html>
