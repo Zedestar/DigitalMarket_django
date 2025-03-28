@@ -65,11 +65,3 @@ def delete_product(request, pk):
         product_to_delete.delete()
         return redirect("index_view")
     return render(request, 'myapp/delete_product.html', context=context)
-
-
-def dashboard(request):
-    products = Product.objects.all()
-    context = {
-        "products":products
-    }
-    return render(request, 'myapp/dashboard.html', context=context)

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="m-4">
+        <div class="flex justify-between shadow-sm py-4">
+            <a href="" class="text-lg font-bold">My product</a>
+            <div class="bg-green-600">
+                <a href="" class="font-bold text-lg text-white p-8">New product</a>
+            </div>
+        </div>
+    </div>
+    <div class="m-5">
+        {% for product in products %}
+            <div class="shadow-lg my-2">
+                <p>This is to create the items</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock body %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="m-4">
+        <div class="flex justify-between shadow-sm py-4">
+            <a href="" class="text-lg font-bold">My product</a>
+            <div class="bg-green-600">
+                <a href="" class="font-bold text-lg text-white p-8">New product</a>
+            </div>
+        </div>
+    </div>
+    <div class="m-5">
+        {% for product in products %}
+            <div class="shadow-sm m-2 p-2">
+                <div>
+                    <div>
+                        <img src="{{ product.photo.url }}"
+                             alt="{{ product.name }}"
+                             class="w-56 h-56 object-cover">
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock body %}
