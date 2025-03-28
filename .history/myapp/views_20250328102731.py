@@ -53,12 +53,3 @@ def edit_product(request, pk):
         "form":form
     }
     return render(request, 'myapp/edit_product.html', context=context)
-
-
-def delete_product(request, pk):
-    product_to_delete = Product.objects.get(pk=pk)
-    if request.method == "POST":
-        messages.success(request, f"{product_to_delete.name} deleted successfully")
-        product_to_delete.delete()
-        return redirect("index_view")
-    return render(request, 'myapp/delete_product.html', context={})

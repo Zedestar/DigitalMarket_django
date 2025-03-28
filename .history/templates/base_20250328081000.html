@@ -24,18 +24,18 @@
                 </div>
             </div>
             <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    var successModal = document.getElementById("successModal");
-                    if (successModal) {
-                        setTimeout(() => {
-                            successModal.style.display = "none";
-                        }, 3000); // Auto-hide after 3 seconds
-                    }
-                });
+    document.addEventListener("DOMContentLoaded", function () {
+        var successModal = document.getElementById("successModal");
+        if (successModal) {
+            setTimeout(() => {
+                successModal.style.display = "none";
+            }, 3000); // Auto-hide after 3 seconds
+        }
+    });
 
-                function closeModal() {
-                    document.getElementById("successModal").style.display = "none";
-                }
+    function closeModal() {
+        document.getElementById("successModal").style.display = "none";
+    }
             </script>
         {% endif %}
         <main class="flex-1 mt-10">

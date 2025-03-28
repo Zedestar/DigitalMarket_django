@@ -57,8 +57,5 @@ def edit_product(request, pk):
 
 def delete_product(request, pk):
     product_to_delete = Product.objects.get(pk=pk)
-    if request.method == "POST":
-        messages.success(request, f"{product_to_delete.name} deleted successfully")
-        product_to_delete.delete()
-        return redirect("index_view")
+    messages.warning(request, f"Are you want to delete {product_to_delete.name}!!??........")
     return render(request, 'myapp/delete_product.html', context={})

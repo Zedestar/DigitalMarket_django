@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="shadow-lg flex items-center justify-center min-h-screen w-full">
+        <form method="POST"
+              class="w-1/3 my-16 mx-auto bg-white p-6 rounded-lg shadow-lg">
+            {% csrf_token %}
+            <h1 class="text-center m-4 font-bold text-lg">Are you sure you want to delete the product</h1>
+            <div class="w-full mb-4 flex items-center justify-center">
+                <button type="submit"
+                        class="w-2/3 bg-green-200 text-white py-2 rounded hover:bg-green-600 transition">Yes</button>
+            </div>
+            <div class="w-full mb-4 flex items-center justify-center">
+                <a href="{% url 'index_view' %}"
+                   class="w-1/3 bg-green-500 text-white py-2 rounded hover:bg-green-600 transition text-center">No</a>
+            </div>
+        </form>
+    </div>
+{% endblock body %}
